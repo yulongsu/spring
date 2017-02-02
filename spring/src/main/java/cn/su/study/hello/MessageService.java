@@ -1,4 +1,4 @@
-package cn.su.study.springtest.hello;
+package cn.su.study.hello;
 
 public interface MessageService {
 	void sayHi();

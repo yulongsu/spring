@@ -1,11 +1,11 @@
-package cn.su.study.spring;
+package cn.su.study.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.stereotype.Component;
 
-import cn.su.study.springtest.hello.MessageService;
+import cn.su.study.hello.MessageService;
 
 /**
  * Hello world!

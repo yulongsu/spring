@@ -1,8 +1,6 @@
-package cn.su.study.hello.impl;
+package cn.su.study.hello;
 
 import org.springframework.stereotype.Component;
-
-import cn.su.study.hello.MessageService;
 
 
 @Component

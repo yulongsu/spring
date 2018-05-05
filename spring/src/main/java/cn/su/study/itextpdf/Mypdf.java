@@ -16,7 +16,7 @@ public class Mypdf {
     public static void main(String[] args) {
         Document document = new Document(PageSize.A4.rotate());
         String fileName = "My first Test";
-        File file = new File("C:\\Temp\\my.pdf");
+        File file = new File("/Users/suyulong/tmp/my.pdf");
         try {
             PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();

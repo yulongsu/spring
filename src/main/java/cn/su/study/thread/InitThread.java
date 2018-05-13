@@ -1,4 +1,4 @@
-package cn.su.study.multiThread;
+package cn.su.study.thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -48,9 +48,7 @@ public class InitThread {
         t5.start();
         try {
             System.out.println(futureTask.get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }

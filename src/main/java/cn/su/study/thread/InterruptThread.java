@@ -10,7 +10,7 @@ public class InterruptThread {
             while (true) {
                 try {
                     Thread.sleep(1000);
-                    //System.out.println("i am alive");
+                    System.out.println("i am alive");
                 } catch (InterruptedException e) {
                     System.out.println(Thread.currentThread().getName() + " interrupt!");
                     //抛出中断异常后，标志位就恢复成了false

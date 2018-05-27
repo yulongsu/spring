@@ -59,7 +59,7 @@ public class linkedListReverse {
             return head;
         }
 
-        Node reHead = reverse(head.getNext());
+        Node reHead = reverse_recurse(head.getNext());
         head.getNext().setNext(head);
         head.setNext(null);
         return reHead;

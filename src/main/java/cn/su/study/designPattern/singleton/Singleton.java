@@ -50,6 +50,11 @@ class Singleton2{
     private Singleton2(){};
 
     private static Singleton2 getInstance(){
+        /**
+         * 对于外部类来说 内部类相当于它的一个属性
+         * 内部类中的private也相当于它本身的private属性
+         * 所以根据类内可见原则 内部类private是可以被外部类访问的
+         */
         return lazyHolder.INSTANCE;
     }
 

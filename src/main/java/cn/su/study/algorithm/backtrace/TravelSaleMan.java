@@ -86,7 +86,7 @@ public class TravelSaleMan {
 
                     backtrace(layer + 1);
 
-                    //当前层全部遍历完之后再回溯至初始壮体，准备进入下一层开始下一次的层次遍历
+                    //当前层全部遍历完之后再回溯至初始状态，准备进入下一层开始下一次的层次遍历
                     currentVal -= graph[x[layer - 1]][x[layer]];
                     swap(x, i, layer);
                 }

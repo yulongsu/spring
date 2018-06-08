@@ -2,6 +2,7 @@ package cn.su.study.thread;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
+import java.sql.SQLOutput;
 import java.util.concurrent.*;
 
 /**
@@ -9,6 +10,7 @@ import java.util.concurrent.*;
  * @date 2018/5/14 22:13
  */
 public class MyThreadFactory {
+    Integer a = 10;
     public static void main(String[] args) {
 
         /**
@@ -19,12 +21,26 @@ public class MyThreadFactory {
 
         ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("su-thread-%d").build();
 
-        ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,
+        ExecutorService singleThreadPool = new ThreadPoolExecutor(10, 10,
             0, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(10), threadFactory);
 
-        singleThreadPool.execute(() -> System.out.println(Thread.currentThread().getName()));
+        //singleThreadPool.execute(() -> System.out.println(Thread.currentThread().getName()));
 
-        singleThreadPool.shutdown();
+        Integer a = 10;
+        MyThreadFactory factory = new MyThreadFactory();
+        singleThreadPool.execute(new Runnable() {
+            @Override
+            public void run() {
+                while (factory.a > 0) {
+                    synchronized (factory.a) {
+                        System.out.println(Thread.currentThread().getName() + " " + factory.a);
+                        factory.a--;
+                    }
+                }
+            }
+        });
+
+        //singleThreadPool.shutdown();
     }
 
 }

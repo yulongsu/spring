@@ -1,5 +1,7 @@
 package cn.su.study;
 
+import java.util.Random;
+
 /**
  * @author suyulong
  * @date 2018/5/14 16:04
@@ -25,8 +27,17 @@ public class publicTest {
         //b = b.intern();
         //System.out.println(b == a);
 
-        System.out.println(1 & 2);
+        //System.out.println(1 & 2);
 
-        System.out.println(2 & 2);
+        //System.out.println(2 & 2);
+
+        for (; ; ) {
+
+            Random random = new Random();
+            int result;
+            result = random.nextInt(2);
+            //result = (result < 1) ? 1 : result;
+            System.out.println(result);
+        }
     }
 }

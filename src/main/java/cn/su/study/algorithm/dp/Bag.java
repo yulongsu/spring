@@ -1,6 +1,7 @@
 package cn.su.study.algorithm.dp;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * 动态规划背包问题

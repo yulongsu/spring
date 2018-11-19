@@ -1,5 +1,6 @@
 package cn.su.study;
 
+import cn.su.exam.BizException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 
@@ -14,7 +15,13 @@ import java.util.stream.Collectors;
 public class PublicTest {
     public static void main(String[] args) throws InterruptedException {
 
-        System.out.println("Oops, cannot get logQueryUrl, please use this command 'WAIT instanceId;' in the console to see additional details!");
+        try{
+            //throw new RuntimeException("123");
+            throw new BizException("123","");
+        }catch (BizException e){
+            throw new RuntimeException("ABC");
+        }
+        //System.out.println("Oops, cannot get logQueryUrl, please use this command 'WAIT instanceId;' in the console to see additional details!");
         //List<String> list = new ArrayList<String>();
         //list.add("a");
         //list.add("b");

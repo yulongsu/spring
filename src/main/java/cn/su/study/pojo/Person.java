@@ -10,6 +10,9 @@ import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+/**
+ * @author suyulong
+ */
 public class Person implements Serializable {
 
 	private static final long serialVersionUID = 5504219157355904951L;
@@ -38,6 +41,10 @@ public class Person implements Serializable {
 			list.add(new Person());
 		}
 		this.setFriends(list);
+	}
+
+	private void makeFriendsPrivate(){
+		System.out.println("just me!");
 	}
 
 	enum Sex {

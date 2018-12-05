@@ -5,7 +5,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -15,13 +18,25 @@ import java.util.stream.Collectors;
 public class PublicTest {
     public static void main(String[] args) throws InterruptedException {
 
-        try{
+
+        Integer integer = 42;
+        System.out.println(integer);
+
+
+        try {
+            //判断instanceof 类型
+            Object map = new HashMap<String,String>(0);
+            if (map instanceof Map) {
+                System.out.println(((HashMap)map).size());
+            }
+
             //throw new RuntimeException("123");
-            throw new BizException("123","");
-        }catch (BizException e){
-            throw new RuntimeException("ABC");
+            //throw new BizException("123", "");
+        } catch (BizException e) {
+            //throw new RuntimeException("ABC");
         }
-        //System.out.println("Oops, cannot get logQueryUrl, please use this command 'WAIT instanceId;' in the console to see additional details!");
+        //System.out.println("Oops, cannot get logQueryUrl, please use this command 'WAIT instanceId;' in the console
+        // to see additional details!");
         //List<String> list = new ArrayList<String>();
         //list.add("a");
         //list.add("b");

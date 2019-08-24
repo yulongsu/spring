@@ -79,5 +79,10 @@
             <version>6.9.10</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.sun.tools.btrace</groupId>
+            <artifactId>btrace-boot</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     </dependencies>
 </project>

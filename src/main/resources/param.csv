@@ -1,2 +1,3 @@
 path,param
-/louverbox/cds/queryLawOverview.json,"{""pageSize"":5}"
+/louverbox/cds/queryLawOverview.json#"{""pageSize"":5}"
+/louverbox/cds/queryLaw.json#{"currentPage":1,"pageSize":10,"issueOrg":"国家市场监督管理总局","contentQueryType":"CONTENT","queryWord":"互联网"}

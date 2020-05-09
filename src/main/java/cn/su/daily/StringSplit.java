@@ -1,9 +1,10 @@
 package cn.su.daily;
 
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 /**
  * @author suyulong
@@ -12,7 +13,9 @@ import java.util.stream.Collectors;
 public class StringSplit {
 
     public static void main(String[] args) {
-        String s1 = "|12";
+        String s = "提出打造“国家标准是底线，行业标准是门槛，企业标准是标杆”的标准体系；\n不仅要促进&ldquo;互联互通&rdquo;，还要为金融科技创新应用划定门槛";
+        System.out.println(s.replaceAll("(\\r\\n|\\r|\\n|\\n\\r)", "<br/>"));
+        /*String s1 = "|12";
         String s2 = "";
         String s3 = "12|34|";
         String s4 = "||";
@@ -38,8 +41,16 @@ public class StringSplit {
         System.out.println(list);
 
         int x = LocalDate.now().getYear()-4;
-        System.out.println(String.valueOf(x));
+        System.out.println(String.valueOf(x));*/
 
+        String str
+            = "53367,112797,58786,117456,176232,196634,206946,53367,112797,58786,117456,176232,196634,"
+            + "206946,53367,112797,58786,117456,176232";
+        String[] sArr = str.split(",", -1);
+        List<String> list = Arrays.asList(sArr);
+        List<List<String>> list2 = Lists.partition(list, 20);
+        System.out.println(list2);
 
     }
 }
+

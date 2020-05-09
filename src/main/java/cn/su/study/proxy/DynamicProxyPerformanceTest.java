@@ -62,16 +62,16 @@
 //        System.out.println("================");
 //
 //        for (int i = 0; i < 3; i++) {
-//            test(jdkProxy, "Run JDK Proxy: ");
-//            test(cglibProxy, "Run CGLIB Proxy: ");
-//            test(javassistProxy, "Run JAVAASSIST Proxy: ");
-//            test(javassistBytecodeProxy, "Run JAVAASSIST Bytecode Proxy: ");
+//            WorkMain(jdkProxy, "Run JDK Proxy: ");
+//            WorkMain(cglibProxy, "Run CGLIB Proxy: ");
+//            WorkMain(javassistProxy, "Run JAVAASSIST Proxy: ");
+//            WorkMain(javassistBytecodeProxy, "Run JAVAASSIST Bytecode Proxy: ");
 //            System.out.println("----------------");
 //        }
 //
 //    }
 //
-//    private static void test(CountService service, String label)
+//    private static void WorkMain(CountService service, String label)
 //        throws Exception {
 //        service.count(); // warm up
 //        int count = 10000000;

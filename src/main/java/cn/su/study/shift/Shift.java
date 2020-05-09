@@ -27,9 +27,16 @@ public class Shift {
         //左移绝不可能出现符号问题，所以不需要带不带符号。所以是没有<<<操作符的，
         //只取原来符号就行。
         printInfo(num >>>= 1);
+
+        printInfo(1 << 31);
+        System.out.println(1 << 31);
+        printInfo(2);
+        printInfo(~2);
     }
 
     private static void printInfo(int num) {
         System.out.println(Integer.toBinaryString(num));
     }
+
+
 }

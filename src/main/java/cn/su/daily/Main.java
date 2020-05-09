@@ -10,12 +10,19 @@ import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
+import java.time.temporal.WeekFields;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author suyulong
@@ -27,11 +34,75 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String dateStr = "2019-02-28";
+        List<String> list = new ArrayList<>();
+        list.add("123");
+        list = Arrays.asList("321");
+        System.out.println(list);
+
+
+       /* while (true){
+            System.out.println(Random.nextInt(10));
+        }*/
+
+
+        /*System.out.println(String.format("%06d", Integer.valueOf(133)));
+        System.out.println(String.format("%06d", Integer.valueOf(1331231)));
+
+        String s = "原标题：时政新闻眼丨习近平再次在京考察 强调这件大事须臾不可放松\n"
+            + "\n"
+            + "[[+_+]]\n"
+            + "\n"
+            + "新冠肺炎疫情是一场大考。赢得这次大考，既要立足当前，抓好当务之急，又要放眼长远，谋划未来之策。3月2"
+            + "日，习近平继上月调研指导疫情防控之后，再次在北京考察。作为战“疫”总指挥的他，在此行中重点关注了什么，做了哪些重要部署，释放了哪些重要信息？\n"
+            + "\n"
+            + "[[+_+]]\n";
+        System.out.println(s.replaceAll("\\[\\[\\+_\\+\\]\\]\\n",""));
+
+        System.out.println(s.replaceAll("\\[\\[\\+_\\+\\]\\]",""));*/
+
+
+        //LocalDate now = LocalDate.now();
+        //String dateStr = "2020-02-23";
+        //LocalDate now = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+
+        //计算本周第一天
+        //DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        //LocalDate firstDayOfNow = now.with(TemporalAdjusters.previous(DayOfWeek.MONDAY));
+        //System.out.println(firstDayOfNow.format(fmt));
+        //int currWeek = now.get(WeekFields.of(DayOfWeek.MONDAY, 4).weekOfWeekBasedYear());
+        //System.out.println(currWeek);
+        //
+        ////上一周的周数
+        //int preWeek = now.minusDays(7).get(WeekFields.of(DayOfWeek.MONDAY, 4).weekOfWeekBasedYear());
+        //System.out.println(preWeek);
+        //
+        ////计算3周以前的第一天
+        //System.out.println(firstDayOfNow.minusDays(21).format(fmt));
+        //
+        //System.out.println(now.minusMonths(11).with(TemporalAdjusters.firstDayOfMonth())
+        //    .format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+
+        /*for (int i = 11; i > -1; i--) {
+            System.out.println((now.minusMonths(i).format(
+                DateTimeFormatter.ofPattern("yyyy-MM"))));
+        }*/
+
+        /*for (int i = 4; i > -1; i--) {
+            System.out.println((String.valueOf(now.getYear() - i)));
+        }*/
+
+
+        /*for (int i = 3 * 7; i > -1; i-=7) {
+            LocalDate ld = now.minusDays(i);
+            String m = String.valueOf(ld.get(WeekFields.of(DayOfWeek.MONDAY, 4).weekOfWeekBasedYear()));
+            System.out.println(ld.with(DayOfWeek.MONDAY).format(DateTimeFormatter.ofPattern("yyyy年MM月dd日")));
+            System.out.println(ld.with(DayOfWeek.SUNDAY).format(DateTimeFormatter.ofPattern("yyyy年MM月dd日")));
+        }*/
         //System.out.println(LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd")).plusDays(1).toString());
 
 
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        /*DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         try {
             Date date = format.parse(dateStr);
             Calendar c = Calendar.getInstance();
@@ -41,7 +112,7 @@ public class Main {
 
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
 
         //String memo = "����ɨ��";
         ////org.apache.commons.lang3.StringEscapeUtils.escapeJava(memo);
@@ -75,7 +146,7 @@ public class Main {
 
         //calcHash("中国人民");
 
-        byte[] secretBytes = null;
+       /* byte[] secretBytes = null;
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             //对字符串进行加密
@@ -92,7 +163,7 @@ public class Main {
         //md5(中国人民,16)
         System.out.println(md5code.substring(8, 24));
         //md5(中国人民,32)
-        System.out.println(md5code);
+        System.out.println(md5code);*/
 
 
         /*md5(中国人民,32) = b17e0c5017c6c6eea21db187fbcadd4a
